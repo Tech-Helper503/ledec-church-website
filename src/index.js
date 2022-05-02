@@ -8,7 +8,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { analytics } from './firebase';
 
-console.log(anal)
+console.log(analytics)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
