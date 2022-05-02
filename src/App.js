@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <AppBar>
         <Toolbar>
-          <Container sx={{display: {sx: 'block', md:'block', lg: 'none', xl: 'none'}}}>
+          <Container sx={{display: {xs: 'block', md:'block', lg: 'none', xl: 'none'}}}>
             <IconButton onClick={() => setdropdownOpened(!dropdownOpened)}>
               <MenuIcon></MenuIcon>
             </IconButton>
