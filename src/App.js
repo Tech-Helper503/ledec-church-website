@@ -4,22 +4,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
+import { NavBar } from './components/NavBar';
 
-function DropdownItems(props) {
-  return props.items.map(item => {
-    return (
-      <div style={{padding: '30px'}}>
-        <Link to={`/${item.toLowerCase()}`}>
-          <Typography>{item}</Typography>        
-        </Link>
-      </div>
-    )
-  })
-}
+
 
 function App() {
 
@@ -27,12 +15,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Toolbar>
-          <Container sx={{display: {xs: 'block', md:'block', lg: 'none', xl: 'none'}}}>
-            <Dropdown actions={[]} actionsDisabled items={['Home', 'About', 'Hubs']} componentMode component></Dropdown>            
-          </Container>
-          <Typography variant='h4'>LEDEC CHURCH</Typography>
-        </Toolbar>
+        <NavBar></NavBar>
       </div>
 
       <Switch>
