@@ -4,7 +4,7 @@ function checkIfObjectIsArray(object) {
     
     
     if(typeof object === 'object'){
-        if(object[0] != null || object[0] != undefined) {
+        if(object[0] != null || object[0] !== undefined) {
             return true
         }
     }

@@ -1,11 +1,10 @@
-import { AppBar, Container, Toolbar, Typography } from '@mui/material';
-import { Dropdown } from './components/Dropdown';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes as Switch,
   Route,
 } from "react-router-dom";
 import { NavBar } from './components/NavBar';
+import { Hubs } from './pages/Hubs'
 
 
 
@@ -19,14 +18,10 @@ function App() {
       </div>
 
       <Switch>
-        <Route path="/">
-          <Home></Home>
+        <Route path="/" element={<App />}>
         </Route>
-        <Route path="/about">
-          <About></About>
-        </Route>
-        <Route path="/hubs">
-          <Hubs></Hubs>
+
+        <Route path="/hubs" element={<Hubs />}>
         </Route>
       </Switch>
     </Router>
