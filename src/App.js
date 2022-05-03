@@ -1,28 +1,32 @@
-import { AppBar, Box, Container, IconButton, Toolbar, Typography } from '@mui/material';
-import MenuIcon  from '@mui/icons-material/Menu'
-import { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+} from "react-router-dom";
+import { NavBar } from './components/NavBar';
+import { Hubs } from './pages/Hubs'
+import { Home } from './pages/Home'
+
+
 
 function App() {
-  const [dropdownOpened, setdropdownOpened] = useState(false);
+
 
   return (
-    <div className="App">
-      <AppBar>
-        <Toolbar>
-          <Container sx={{display: {xs: 'block', md:'block', lg: 'none', xl: 'none'}}}>
-            <IconButton onClick={() => setdropdownOpened(!dropdownOpened)}>
-              <MenuIcon></MenuIcon>
-            </IconButton>
-          </Container>
-          <Typography variant='h4'>LEDEC CHURCH</Typography>
-        </Toolbar>
-      </AppBar>
-      {dropdownOpened && (
-        <Box sx={{'width': '100%', 'height': '100%'}}>
-          <Typography variant="h5">home</Typography>
-        </Box>
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar></NavBar>
+      </div>
+
+      <Switch>
+        <Route path="/" element={<Home />}>
+        </Route>
+
+        <Route path="/hubs" element={<Hubs />}>
+        </Route>
+      </Switch>
+    </Router>
+
   );
 }
 
