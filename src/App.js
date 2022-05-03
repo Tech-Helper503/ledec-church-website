@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import { NavBar } from './components/NavBar';
 import { Hubs } from './pages/Hubs'
+import { Home } from './pages/Home'
 
 
 
@@ -18,7 +19,7 @@ function App() {
       </div>
 
       <Switch>
-        <Route path="/" element={<App />}>
+        <Route path="/" element={<Home />}>
         </Route>
 
         <Route path="/hubs" element={<Hubs />}>
